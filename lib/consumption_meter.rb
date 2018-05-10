@@ -1,5 +1,6 @@
 require 'consumption_meter/engine'
 require 'consumption_meter/size'
+require 'consumption_meter/quantity'
 
 module ConsumptionMeter
 
@@ -18,7 +19,7 @@ module ConsumptionMeter
         when :size
           ConsumptionMeter::Size.new(price_per_unit, field, collection)
         when :quantity
-          # ConsumptionMeter::Quantity.new(price_per_unit, field, filter)
+          ConsumptionMeter::Quantity.new(price_per_unit, field, collection)
         else
           raise "Unknow Unit to Measure"
       end

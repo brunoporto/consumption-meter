@@ -37,11 +37,26 @@ MyModel.measure :size, 10, :file_size, {account_id: account.id}
 meter = MyModel.measure :size, 10, :file_size, {account_id: account.id}
 # Sum file_size = 2179.0
 
-#SHOW PRICE PER UNIT (:B, :KB, :MB, :GB)
+# PRICE PER UNIT (:B, :KB, :MB, :GB)
 meter.price :KB
 #> 21.279296875
 
-#SHOW SIZE IN UNIT (:B, :KB, :MB, :GB)
+# SIZE IN UNIT (:B, :KB, :MB, :GB)
 meter.size :KB
 #> 2.1279296875
+```
+
+### Quantity
+
+```ruby
+meter = MyModel.measure :quantity, 10, :qty, {account_id: account.id}
+# Sum qty = 45.5
+
+# TOTAL PRICE
+meter.price
+#> 455.0
+
+# TOTAL SIZE
+meter.size
+#> 45.5
 ```
