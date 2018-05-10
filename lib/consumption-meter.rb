@@ -1,0 +1,1 @@
+require 'consumption_meter'
