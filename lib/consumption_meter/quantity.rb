@@ -5,7 +5,7 @@ module ConsumptionMeter
 
     def initialize(price_per_unit, field, collection)
       @price_per_unit = price_per_unit.to_f
-      @total_units = collection.sum(field).to_f
+      @total_units = (field.present? ? collection.sum(field) : collection.count).to_f
     end
 
     def price

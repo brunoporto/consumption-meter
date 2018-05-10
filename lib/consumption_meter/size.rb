@@ -5,7 +5,7 @@ module ConsumptionMeter
 
     def initialize(price_per_bytes, field, collection)
       @price_per_bytes = price_per_bytes.to_f
-      @total_bytes = collection.sum(field).to_f
+      @total_bytes = field.present? ? collection.sum(field).to_f : 0.0
     end
 
     def price(unit)

@@ -48,6 +48,7 @@ meter.size :KB
 
 ### Quantity
 
+**SUM**
 ```ruby
 meter = MyModel.measure :quantity, 10, :qty, {account_id: account.id}
 # Sum qty = 45.5
@@ -59,4 +60,18 @@ meter.price
 # TOTAL SIZE
 meter.size
 #> 45.5
+```
+
+**COUNT**
+```ruby
+meter = MyModel.measure :quantity, 10, nil, {account_id: account.id}
+# Count Records = 5.0
+
+# TOTAL PRICE
+meter.price
+#> 50.0
+
+# TOTAL SIZE
+meter.size
+#> 5.0
 ```

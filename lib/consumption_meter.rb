@@ -9,8 +9,8 @@ module ConsumptionMeter
   end
 
   module ClassMethods
-    def measure(unit, price_per_unit, field, filter={})
-      collection = self.where(filter)
+    def measure(unit, price_per_unit, field=nil, filter=nil)
+      collection = filter.nil? ? self.all : self.where(filter)
       case unit
         when :hour, :minute, :second
           # ConsumptionMeter::Time.new(unit, price_per_unit, field, filter)
