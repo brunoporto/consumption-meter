@@ -1,6 +1,6 @@
 # Consumption Meter 
 
-Library to help
+Library for measurement of resource consumption 
 
 ## How to install
 

@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email       = ['brunotporto@gmail.com']
   spec.homepage    = 'https://github.com/taxweb/consumption-meter'
   spec.summary     = 'Consumption Meter'
-  spec.description = 'Consumption Meter'
+  spec.description = 'Library for measurement of resource consumption '
   spec.license     = 'MIT'
 
   spec.files = Dir['{lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
