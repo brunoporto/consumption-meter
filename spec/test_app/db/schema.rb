@@ -10,6 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_05_10_150825) do
+
+  create_table "fake_models", force: :cascade do |t|
+    t.float "fake_size", default: 0.0
+    t.integer "fake_qty", default: 0
+    t.date "fake_date"
+    t.time "fake_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
